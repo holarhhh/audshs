@@ -1,0 +1,218 @@
+ * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-image: url(images/opacitylogo.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: clamp(100px, 80%, 100%);
+        background-position: center;
+        
+
+      }
+      html{
+        height: 100%;
+      }
+      nav {
+        background: rgba(19, 22, 26, 0.6);
+        height: 15%;
+        width: 100%;
+        position: sticky;
+      }
+      label.logo {
+        color: aliceblue;
+        font-size: 35px;
+        line-height: 80px;
+      }
+      nav ul {
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a {
+        color: aliceblue;
+        font-size: 20px;
+      }
+      .checkbtn {
+        font-size: 30px;
+        color: aliceblue;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      #check {
+        display: none;
+      }
+      @media (max-width: 952px) {
+        label.logo {
+          font-size: 30px;
+          padding-left: 50px;
+        }
+        nav ul li a {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 858px) {
+        .checkbtn {
+          display: block;
+        }
+        ul {
+          position: fixed;
+          width: 100px;
+          height: 100vh;
+          background: rgba(20, 22, 26, 0.6);
+          top: 80px;
+          left: -100px;
+          text-align: center;
+          transition: all 0.5s;
+        }
+        nav ul li {
+          display: block;
+        }
+        nav ul li a {
+          font-size: 20px;
+        }
+        #check:checked ~ ul {
+          left: 0;
+        }
+
+        ul li a:hover {
+          color: blue;
+          transition: all ease 0.2s;
+        }
+        a.active,
+        a:active {
+          color: blue;
+        }
+      }
+
+      ul li a:hover {
+        border-bottom: 2px solid yellow;
+        transition: all ease 0.2s;
+      }
+      a.active, a:active {
+        border-bottom: 2px solid yellow;
+        transition: all ease 0.2s;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        background-color: transparent;
+      }
+      @media screen and (min-width: 1080px)
+      {
+       form{ display: grid;
+        padding-left: 425px;
+        padding-top: 100px;
+        padding-bottom: 20px;
+        
+      }
+      }
+      input{
+        display: grid;
+        padding: 0 15PX;
+        margin-top:10px; 
+        width: 6cm;
+        height: 1cm;
+        background-color: transparent;
+        
+      }
+
+ .btn{
+  margin-top: 20px; 
+  border: 2px double blue;
+  padding: 2px 2px 2px 2px;
+  border-radius: 20px;
+  color:blue;
+  cursor: pointer;
+  width: 90px;
+  text-align: center;
+  height: 30px;
+
+ }
+ .btn:hover{
+background-color: blue;
+color: white;
+
+
+ }
+
+ .password-f{
+  font-size: 13px;
+  color: black;
+
+ }
+ .sign-up{
+      margin-top: 20px;
+      float: right;
+      color: blue;
+ }
+ .form-div{
+  border: 2px solid;
+  padding: 30px;
+background-color: transparent;
+border-radius: 20px;
+ }
+ marquee{
+  color: green;
+  font-size: 20px;
+ }
+.container{
+            max-width: 1170px;
+            
+        }
+        footer{
+            box-sizing: border-box;
+            width: 100%;
+            font-size: clamp(0.8125rem, 0.6563rem + 0.5vw, 0.9375rem); 
+            margin: auto;
+            position: sticky;
+            top: 100%;
+              
+          }
+        .copyright{
+            text-align: center;
+            border-top: 2px solid white;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .footer-col{
+            width: 25%;
+            padding: 0 15px;
+            
+        }
+        h4{
+            border-bottom: 1px solid;
+        }
+        .ms-image{
+          width: 300px;
+          height: 200px;
+          justify-content: center;
+          margin: auto;
+          display: grid;
+        }
+        .historyimg{
+          width: 320px;
+          height: 200px;
+          justify-content: center;
+          margin: auto;
+          display: grid;
+        }

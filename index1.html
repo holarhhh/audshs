@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ansarudeenhighschool</title>
+    <link rel="stylesheet" type="text/css" href="index1.css">
+    <script
+      src="https://kit.fontawesome.com/2be0005226.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      .first-bg{
+        width: 100%;
+        height: 85%;
+        top: 0;
+        background-color: none;
+        background: url(images/DSC_6291.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .background{
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-image: url(images/opacitylogo.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: clamp(100px, 80%, 100%);
+        background-position: center;
+
+
+      }
+      html{
+        height: 100%;
+      }
+      nav {
+        background: rgba(19, 22, 26, 0.6);
+        height: 15%;
+        width: 100%;
+        position: sticky;
+      }
+      label.logo {
+        color: aliceblue;
+        font-size: 35px;
+        line-height: px;
+      }
+        .logo-1{
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            margin-top: 10px;
+            border: 3px dotted white;
+            
+        }
+
+      nav ul {
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a {
+        color: aliceblue;
+        font-size: 20px;
+      }
+      .checkbtn {
+        font-size: 30px;
+        color: aliceblue;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      #check {
+        display: none;
+      }
+      @media (max-width: 952px) {
+        label.logo {
+          font-size: 30px;
+          padding-left: 50px;
+        }
+        nav ul li a {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 858px) {
+        .checkbtn {
+          display: block;
+        }
+        ul {
+          position: fixed;
+          width: 100px;
+          height: 100vh;
+          background: rgba(20, 22, 26, 0.6);
+          top: 80px;
+          left: -100px;
+          text-align: center;
+          transition: all 0.5s;
+        }
+        nav ul li {
+          display: block;
+        }
+        nav ul li a {
+          font-size: 20px;
+        }
+        #check:checked ~ ul {
+          left: 0;
+        }
+
+        ul li a:hover {
+          color: blue;
+          transition: all ease 0.2s;
+        }
+        a.active,
+        a:active {
+          color: blue;
+        }
+      }
+
+      ul li a:hover {
+        border-bottom: 2px solid yellow;
+        transition: all ease 0.2s;
+      }
+      a.active,
+      a:active {
+        border-bottom: 2px solid yellow;
+        transition: all ease 0.2s;
+      }
+      h1 {
+        color: beige;
+        font-size: 18vw;
+        text-align: center;
+        text-shadow: 5px 1px 5px black;
+        padding-top: 60px;
+      }
+      .school-name {
+        text-align: center;
+        color: yellow;
+        text-shadow: 5px 1px 5px black;
+        font-size: 4vw;
+        padding-top: 10px;
+      }
+      button {
+        background-color: green;
+        border-radius: 100px;
+        box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+          rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+          rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+          rgba(44, 187, 99, 0.15) 0 16px 32px;
+        color: wheat;
+        cursor: pointer;
+        font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto,
+          sans-serif;
+        padding: 9px 28px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 30px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        align-content: center;
+        align-items: center;
+        width: clamp(100px, 80%, 120px);
+      }
+
+      button:hover {
+        box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+          rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+          rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+          rgba(44, 187, 99, 0.25) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
+      }
+
+      .div-mission {
+        color: green;
+        font-family: "Times New Roman", Times, serif;
+        font-size: clamp(1.0625rem, -0.3438rem + 4.5vw, 2.1875rem);
+        text-align: center;
+        text-shadow: 1px 2px 0px black;
+        width: clamp(400px, 80%, 100px);
+        justify-content: center;
+        margin: auto;
+        margin-top: 200px;
+        background-color: white;
+        border-radius: 20px;
+      }
+      .statement {
+        text-shadow: 0px 0px 0px white;
+        width: 100%;
+      }
+      .history {
+        color: green;
+        font-family: "Times New Roman", Times, serif;
+        font-size: clamp(1.0625rem, -0.3438rem + 4.5vw, 2.1875rem);
+        text-align: center;
+        text-shadow: 1px 2px 0px black;
+        width: clamp(400px, 80%, 100px);
+        justify-content: center;
+        margin: auto;
+        margin-top: 200px;
+        background-color: white;
+        border-radius: 20px;
+
+      }
+      .history-p {
+        text-shadow: none;
+      }
+      .div1 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      @media (max-width: 600px) {
+        .history {
+          margin-top: 70px;
+        }
+      }
+      .mission-statement {
+        padding-bottom: 10px;
+        border-bottom: 5px solid yellow;
+      }
+      .school-history {
+        padding-bottom: 10px;
+        border-bottom: 5px solid yellow;
+      }
+
+        .box{
+          width: 100%;
+          max-width: 1170px;
+
+        }
+        footer{
+          box-sizing: border-box;
+          position: relative;
+          top: 100vh;
+          background-color: lightgreen;
+          margin: 0;
+
+          }
+        .copyright{
+            text-align: center;
+            border-top: 2px solid white;
+        }
+        .box-row{
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .box-col{
+            width: 25%;
+            padding: 0 15px;
+
+        }
+        .box-4{
+            border-bottom: 1px solid;
+        }
+        .ms-image{
+          width: 300px;
+          height: 200px;
+          justify-content: center;
+          margin: auto;
+          display: grid;
+        }
+        .historyimg{
+          width: 320px;
+          height: 200px;
+          justify-content: center;
+          margin: auto;
+          display: grid;
+        }
+        .tin{
+        width: 300px;
+        height: 350px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 20px;
+            display: flex;
+        }
+        .tinubu-name{
+          position: absolute;
+          text-transform: uppercase;
+          text-align: center;
+          background-color: grey;
+          width: 300px;
+          margin-top: 250px;
+          color: white;
+        }
+        .tinubu-img{
+          width:300px;
+          height: 300px;
+          border-radius: 10px;
+          border: 2px solid white;
+          box-shadow: 0px 5px 10px rgba(0 0 0);
+        }
+        @media (max-width:600px){
+          .tinubu-img{
+            width:300px;
+            border-radius: 10px;
+            border: 2px solid white;
+          }
+          .tinubu-name{
+            position: absolute;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: grey;
+            width: 300px;
+            margin-top: 250px;
+            color: white;
+          }
+          .tin{
+            width: 300px;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-top: 20px;
+          }
+        }
+        .bio-tinubu{
+          position: absolute;
+            width: 250px;
+            color: transparent;
+            
+        }
+    
+        .bio-tinubu:hover{
+            backdrop-filter: blur(20px);
+            color: aqua;
+            border-radius: 20px;
+            
+        }
+        .shettima{
+            width: 300px;
+        height: 350px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 20px;
+            display: flex;
+        }
+        .shettima-img{
+             width:250px;
+          height: 300px;
+          border-radius: 10px;
+          border: 2px solid white;
+          box-shadow: 0px 5px 10px rgba(0 0 0);
+        }
+        .shettima-name{
+             position: absolute;
+          text-transform: uppercase;
+          text-align: center;
+          background-color: grey;
+          width: 200px;
+          margin-top: 250px;
+          color: white;
+            margin-bottom: 350px;
+        }
+        .general-gov-info{
+ display: flex;
+        }
+        @media (max-width:700px){
+            .general-gov-info{
+                display: grid;
+            }
+        }
+
+    </style>
+  </head>
+  <body class="background">
+    <main>
+    <div class="first-bg">
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn"> <i class="fas fa-bars"></i></label>
+      <label class="logo"><img class="logo-1" src="images/logo.jpg"></label>
+      <ul>
+        <li><a href="index1.html" class="active">Home</a></li>
+        <li><a href="index2.html">Enroll</a></li>
+        <li><a href="index3.html">News</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </nav>
+    <h1>Welcome</h1>
+    <p class="school-name">
+      To <br />Ansar-Udeen Senior High School<br />" Here We Make The Best Out
+      Of The Rest"
+    </p>
+    <button id="btn">Enroll</button>
+    </div>
+    <div class="div1">
+      <div class="div-mission">
+        <p class="mission-statement">
+          <i class="fa-solid fa-user-graduate fa-beat"> OUR MISSION STATEMENT</i>
+        </p>
+        <p class="statement">
+          <img class="ms-image" src="images/mission statement.jpg" alt="mission statement">
+          To educate all students to the highest levels of academic achievement,
+          to enable them to reach and expand their potential, and to prepare
+          them to become productive, responsible, ethical, creative and
+          compassionate members of society
+        </p>
+      </div>
+      <div class="history">
+        <p class="school-history">
+          <i class="fa-solid fa-clock-rotate-left fa-bounce"> OUR HISTORY</i>
+        </p>
+        <p class="history-p">
+          <img class="historyimg" src="images/history.jpg" alt="history">
+          The school was founded in 1961 by the Ansar-ud-deen society of Nigeria
+          as a college for training in all aspects of commercial skills with
+          emphasis on secretarial studies. The School was split into Junior and
+          senior schools in Jan.2003. The school has a very strong old student
+          association.
+        </p>
+      </div>
+    </div>
+        <div class="general-gov-info">
+    <div class="tin">
+      <p class="tinubu-name">president bola hamed tinubu<br>( asiwaju )</p>
+        <img class="tinubu-img"src="images/Asiwaju-Bola-Ahmed-Tinubu.jpeg" alt="asiwaju">
+        <p class="bio-tinubu" style="text-align: justify;">Chief Bola Ahmed Adekunle Tinubu GCFR (born 29 March 1952) is a Nigerian politician who is the 16th and current president of Nigeria.He was the governor of Lagos State from 1999 to 2007 and senator for Lagos West in the Third Republic.      
+</p>
+        </div>
+    <div class="shettima">
+        <img class="shettima-img" src="images/Kashim_Shettima_office_portrait.jpg">
+      <p class="shettima-name" style="margin-top: 600px;">vice president kashim shettima</p>
+    </div>
+        </div>
+  </main>
+  <footer style="background-color: gray">
+      <div class="box">
+          <div Class="box-row">
+              <div Class="box-col">
+              <h4 Class="box-4" >A.U.D.S.H.S</h4>
+                  <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+                  <a href="#"><i class="fa-solid fa-door-open"></i>Enroll</a>
+                  <a href="#"><i class="fa-solid fa-circle-info"></i>Support</a>
+                  <a href="#"><i class="fa-solid fa-address-card"></i>About us</a>
+              </div>
+              <div class="box-col">
+              <h4  Class="box-4" >social media</h4>
+                  <p><i class="fa-brands fa-facebook"></i>Facebook</p>
+                  <p><i class="fa-brands fa-whatsapp"></i>Whatsapp</p>
+                  <p><i class="fa-brands fa-twitter fa-shake"></i>Twitter</p>
+              </div>
+              <div class="box-col">
+              <h4 Class="box-4" >Contact us</h4>
+                  <p><i class="fa-solid fa-location-dot"></i>77, falolu street, lawanson road, surulere, Lagos</p>
+         <p><i class="fa-solid fa-envelope ">:</i>audsnr61@lagosschoolsonline.com</p>
+              </div>
+              <div class="box-col">
+              <h4 Class="box-4" >News</h4>
+                  <p><a href="#">PTA Meeting</a></p>
+                  <p><a href="#">Breaking News</a></p>
+                  <p><a href="#">Today's Headline</a></p>
+              </div>
+          </div>
+        </div>
+        <p class="copyright">
+        &copy;copyright all rights reserved, founded by a
+        student(olatunji-lateef) in ss2A science class
+      </p>
+    </footer>
+
+  </body>
+</html>

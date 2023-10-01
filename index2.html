@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index2.css" />
+    <script
+      src="https://kit.fontawesome.com/2be0005226.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Enrollcentre</title>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn"> <i class="fas fa-bars"></i></label>
+      <label class="logo">A.U.D.S.H.S</label>
+      <ul>
+        <li><a href="index1.html" class="active">Home</a></li>
+        <li><a href="index2.html">Enroll</a></li>
+        <li><a href="index3.html">News</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </nav>
+    <form>
+      <div class="form-div">
+        <h1 class="login">Login</h1>
+        <input type="username" placeholder="username" id="username" />
+        <input type="Password" placeholder="Password" id="password" />
+        <a class="password-f" href="#">forgot your password?</a><br />
+        <a class="sign-up" href="#">Sign up</a>
+      </div>
+      <botton class="btn" type="Submit" id="submit"
+        ><a href="index3.html">Submit</a></botton
+      >
+    </form>
+    <marquee>Ansar-U-Deen Senior High School Falolu, Surulere, Lagos</marquee>
+
+    <footer style="background-color: gray">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>A.U.D.S.H.S</h4>
+            <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="#"><i class="fa-solid fa-door-open"></i>Enroll</a>
+            <a href="#"><i class="fa-solid fa-circle-info"></i>Support</a>
+            <a href="#"><i class="fa-solid fa-address-card"></i>About us</a>
+          </div>
+          <div class="footer-col">
+            <h4>social media</h4>
+            <p><i class="fa-brands fa-facebook"></i>Facebook</p>
+            <p><i class="fa-brands fa-whatsapp"></i>Whatsapp</p>
+            <p><i class="fa-brands fa-twitter fa-shake"></i>Twitter</p>
+          </div>
+          <div class="footer-col">
+            <h4>Contact us</h4>
+            <p>
+              <i class="fa-solid fa-location-dot"></i>77, falolu street,
+              lawanson road, surulere, Lagos
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope">:</i
+              >audsnr61@lagosschoolsonline.com
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>News</h4>
+            <p><a href="#">PTA Meeting</a></p>
+            <p><a href="#">Breaking News</a></p>
+            <p><a href="#">Today's Headline</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">
+        &copy;copyright all rights reserved, founded by a
+        student(olatunji-lateef) in ss2A science class
+      </p>
+    </footer>
+  </body>
+  <script type="Module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCirLUj-v9Rf-pptHPUH0Ty5xnlFNMkxvw",
+        authDomain: "a-u-d-school.firebaseapp.com",
+        databaseURL: "https://a-u-d-school-default-rtdb.firebaseio.com",
+        projectId: "a-u-d-school",
+        storageBucket: "a-u-d-school.appspot.com",
+        messagingSenderId: "623631679044",
+        appId: "1:623631679044:web:58a7abec93ac21d3004611"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+      document.getElementById("submit").addEventListener('click', function(e)){
+        set(ref(db, 'user/', + document.getElementById("username"))
+      }
+  </script>
+</html>
